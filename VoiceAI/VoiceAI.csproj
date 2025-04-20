@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{F6611A96-82A4-4D53-93F2-5710F073BC45}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>VoiceAIGui.Properties</RootNamespace>
+    <AssemblyName>VoiceAI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>VoiceAI.ico</ApplicationIcon>
+    <StartupObject>Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AudioConverter" />
+    <Reference Include="BugSplatDotNet" />
+    <Reference Include="CefSharp" />
+    <Reference Include="CefSharp.Core" />
+    <Reference Include="CefSharp.WinForms" />
+    <Reference Include="NAudio" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APIClient.cs" />
+    <Compile Include="AudioQueue.cs" />
+    <Compile Include="AudioService.cs" />
+    <Compile Include="BrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowserForm.Designer.cs">
+      <DependentUpon>BrowserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsoleExtension.cs" />
+    <Compile Include="ControlExtensions.cs" />
+    <Compile Include="DiscordManager.cs" />
+    <Compile Include="Discord\AchievementManager.cs" />
+    <Compile Include="Discord\Activity.cs" />
+    <Compile Include="Discord\ActivityActionType.cs" />
+    <Compile Include="Discord\ActivityAssets.cs" />
+    <Compile Include="Discord\ActivityJoinRequestReply.cs" />
+    <Compile Include="Discord\ActivityManager.cs" />
+    <Compile Include="Discord\ActivityParty.cs" />
+    <Compile Include="Discord\ActivitySecrets.cs" />
+    <Compile Include="Discord\ActivityTimestamps.cs" />
+    <Compile Include="Discord\ActivityType.cs" />
+    <Compile Include="Discord\ApplicationManager.cs" />
+    <Compile Include="Discord\Constants.cs" />
+    <Compile Include="Discord\CreateFlags.cs" />
+    <Compile Include="Discord\Discord.cs" />
+    <Compile Include="Discord\Entitlement.cs" />
+    <Compile Include="Discord\EntitlementType.cs" />
+    <Compile Include="Discord\FileStat.cs" />
+    <Compile Include="Discord\ImageDimensions.cs" />
+    <Compile Include="Discord\ImageHandle.cs" />
+    <Compile Include="Discord\ImageManager.cs" />
+    <Compile Include="Discord\ImageType.cs" />
+    <Compile Include="Discord\InputMode.cs" />
+    <Compile Include="Discord\InputModeType.cs" />
+    <Compile Include="Discord\Lobby.cs" />
+    <Compile Include="Discord\LobbyManager.cs" />
+    <Compile Include="Discord\LobbyMemberTransaction.cs" />
+    <Compile Include="Discord\LobbySearchCast.cs" />
+    <Compile Include="Discord\LobbySearchComparison.cs" />
+    <Compile Include="Discord\LobbySearchDistance.cs" />
+    <Compile Include="Discord\LobbySearchQuery.cs" />
+    <Compile Include="Discord\LobbyTransaction.cs" />
+    <Compile Include="Discord\LobbyType.cs" />
+    <Compile Include="Discord\LogLevel.cs" />
+    <Compile Include="Discord\MonoPInvokeCallbackAttribute.cs" />
+    <Compile Include="Discord\NetworkManager.cs" />
+    <Compile Include="Discord\OAuth2Token.cs" />
+    <Compile Include="Discord\OverlayManager.cs" />
+    <Compile Include="Discord\PartySize.cs" />
+    <Compile Include="Discord\PremiumType.cs" />
+    <Compile Include="Discord\Presence.cs" />
+    <Compile Include="Discord\Relationship.cs" />
+    <Compile Include="Discord\RelationshipManager.cs" />
+    <Compile Include="Discord\RelationshipType.cs" />
+    <Compile Include="Discord\Result.cs" />
+    <Compile Include="Discord\ResultException.cs" />
+    <Compile Include="Discord\Sku.cs" />
+    <Compile Include="Discord\SkuPrice.cs" />
+    <Compile Include="Discord\SkuType.cs" />
+    <Compile Include="Discord\Status.cs" />
+    <Compile Include="Discord\StorageManager.cs" />
+    <Compile Include="Discord\StoreManager.cs" />
+    <Compile Include="Discord\User.cs" />
+    <Compile Include="Discord\UserAchievement.cs" />
+    <Compile Include="Discord\UserFlag.cs" />
+    <Compile Include="Discord\UserManager.cs" />
+    <Compile Include="Discord\VoiceManager.cs" />
+    <Compile Include="DownloadHandler.cs" />
+    <Compile Include="DualStream.cs" />
+    <Compile Include="GlobalHotKey.cs" />
+    <Compile Include="IdleTime.cs" />
+    <Compile Include="MemoryTributary.cs" />
+    <Compile Include="PowerRequester.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="SelfHost.cs" />
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ThreadProcessor.cs" />
+    <Compile Include="TimeOutWebClient.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="VCController.cs" />
+    <Compile Include="VoiceChanger.cs" />
+    <Compile Include="WaveMerge.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resources" />
+    <EmbeddedResource Include="VoiceAIGui.BrowserForm.resources" />
+    <EmbeddedResource Include="VoiceAIGui.DebugForm.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
